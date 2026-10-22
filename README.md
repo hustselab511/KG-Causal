@@ -19,25 +19,7 @@ The method is evaluated on **IU-Xray**, **MIMIC-CXR**, and **CheXpert Plus** usi
 
 The method comprises **offline knowledge induction** and an **online PerInGen pipeline**:
 
-```text
-Radiology reports ── RadGraph + CheXbert + LLM-SA ──► Global knowledge graph
-                                                            │
-Chest X-ray ──► Visual encoder ──► Disease-state retrieval ──► Factual KG
-      │                                                     │
-      │                                           Semantic intervention (SCR)
-      │                                                     │
-      │                                              Counterfactual KG
-      │                                                     │
-      └──────────────► Bidirectional fusion (CIF) ◄─────────┘
-                                   │
-                       Factual–counterfactual difference
-                                   │
-                          Causal gating (CGU)
-                                   │
-                         Transformer decoder
-                                   │
-                           Generated report
-```
+![Model Architecture](KG-Causal/KG-Causal-framework.pdf)
 
 The paper's **Fig. 2** provides the full architectural diagram. The LLM is used for *offline semantic structuring and intervention design*, not as the report-generation backbone.
 

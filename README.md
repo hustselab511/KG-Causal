@@ -19,7 +19,9 @@ The method is evaluated on **IU-Xray**, **MIMIC-CXR**, and **CheXpert Plus** usi
 
 The method comprises **offline knowledge induction** and an **online PerInGen pipeline**:
 
-![Model Architecture](KG-Causal/KG-Causal-framework.pdf)
+<p align="center">
+  <img src="./images/framework.png" width="90%">
+</p>
 
 The paper's **Fig. 2** provides the full architectural diagram. The LLM is used for *offline semantic structuring and intervention design*, not as the report-generation backbone.
 

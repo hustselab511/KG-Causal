@@ -94,7 +94,7 @@ The following settings are reported in the supplied manuscript; they should be c
 | Shared semantic space | Embedding dimension | 512 |
 | Training | Batch size | 16 |
 | Training | IU-Xray epochs | 30 |
-| Training | MIMIC-CXR epochs | 15 |
+| Training | MIMIC-CXR epochs | 10 |
 | Training | ResNet learning rate | 5 × 10⁻⁵ |
 | Training | Other-module learning rate | 1 × 10⁻⁴ |
 | IU-Xray | Maximum report length | 60 tokens |
@@ -116,18 +116,6 @@ The manuscript describes training with cross-entropy loss for the final report; 
 
 Evaluation includes **BLEU-1–4, METEOR, ROUGE-L, CIDEr**, **CheXbert-based clinical efficacy**, and **RadGraph-based entity/relation metrics**. These metrics use different protocols and should not be compared across datasets without accounting for the evaluation setup.
 
-## ⚠️ Release Checklist
-
-Before describing this repository as fully reproducible, the following items need to be resolved in the uploaded code snapshot:
-
-- Add `config/mimic_cxr.json` (and other required experiment configurations).
-- Restore missing imported modules, including `models/KM_c.py`, `trainer/KMC_trainer.py`, `modules/radgraph_m.py`, and `utils/radgraph_download.py`, or remove unused imports safely.
-- Replace machine-specific data/model paths and configure knowledge resources.
-- Fix the malformed f-string in `trainer/KM_main.py` (`print(f"seed:{args['seed']}")`).
-- Publish a tested `requirements.txt`, reproducible train/evaluation commands, and checkpoint/data-preparation instructions.
-- Review third-party licenses and bundled metric dependencies before distribution.
-
-These limitations apply to the **uploaded snapshot** and may not reflect the full development repository.
 
 ## 📝 Citation
 

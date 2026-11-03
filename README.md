@@ -80,7 +80,7 @@ The current entry point is:
 python -m trainer.KM_main
 ```
 
-It loads `config/mimic_cxr.json` and uses its `task` field to select `train` or `sample`. **This is the source entry point, not a verified runnable reproduction command for the provided archive.** The archive lacks that configuration and several imported modules; see [Release checklist](#-release-checklist).
+It loads `config/mimic_cxr.json` and uses its `task` field to select `train` or `sample`. 
 
 ## 📊 Hyperparameters
 

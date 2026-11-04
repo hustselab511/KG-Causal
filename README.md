@@ -1,4 +1,4 @@
-# KG-Causal: A Knowledge-Guided Causal Framework for Interpretable Radiology Report Generation
+# A Knowledge-Guided Counterfactual Intervention Aware Framework for Radiology Report Generation
 
 **Official research implementation (release preparation)** · [Paper manuscript](#-citation)
 
@@ -10,8 +10,8 @@ We propose **KG-Causal**, a knowledge-guided causal reasoning framework built ar
 
 1. **Knowledge Graph Construction (KGC):** Extract radiological entities and relations with RadGraph, organize them into disease-state semantic clusters with CheXbert labels and LLM-assisted semantic aggregation, and retrieve image-specific knowledge subgraphs.
 2. **Semantic Counterfactual Reasoning (SCR):** Modify selected diagnostic cluster states (e.g., present → absent) in the knowledge space while keeping the chest X-ray evidence unchanged.
-3. **Causal Interaction Fusion (CIF):** Perform bidirectional vision–knowledge attention for knowledge-guided perception and evidence-corrected knowledge reasoning.
-4. **Causal Gating Unit (CGU):** Use factual–counterfactual representation discrepancies to modulate the fused features before report generation.
+3. **Causal Interaction Fusion (BIF):** Perform bidirectional vision–knowledge attention for knowledge-guided perception and evidence-corrected knowledge reasoning.
+4. **Counterfactual Gate Unit (CGU):** Use factual–counterfactual representation discrepancies to modulate the fused features before report generation.
 
 The method is evaluated on **IU-Xray**, **MIMIC-CXR**, and **CheXpert Plus** using both language-generation and clinical-efficacy metrics.
 
